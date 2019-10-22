@@ -80,7 +80,7 @@ void WINAPI CallBack(ModuleDump Dump)
 		return false;
 	};
 
-	// If the found module is not the PEB it probably means it's mapped
+	// If the found module is not inside the PEB probably means it's mapped
 	if (!IsModuleInsidePEB(reinterpret_cast<HMODULE>(Dump.ModuleBase)))
 	{
 		// We may need to whitelist some modules.
